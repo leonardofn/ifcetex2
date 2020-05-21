@@ -463,40 +463,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\preambulotese}{
-	Tese apresentada ao Curso de \imprimirdoutorado\ do \imprimirprogramadoutorado\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do título de doutor em \imprimirdoutorem. Área de Concentração: \imprimirareadeconcentracaodoutorado \\
+	Tese apresentada ao curso de Doutorado Acadêmico em \imprimirdoutorem\ do \imprimirprogramadoutorado\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) --	\textit{Campus} \imprimircampus, como requisito parcial para obtenção do Título de Mestre(a) em \imprimirdoutorem. Área de concentração: \imprimirareadeconcentracaodoutorado. \\
 }
 
 \newcommand{\preambulodissertacao}{
-	Dissertação apresentada ao Curso de \imprimirmestrado\ do \imprimirprogramamestrado\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do título de mestre em \imprimirmestreem. Área de Concentração: \imprimirareadeconcentracaomestrado \\
+	Dissertação apresentada ao curso de Mestrado Acadêmico em \imprimirmestreem\ do \imprimirprogramamestrado\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) --	\textit{Campus} \imprimircampus, como requisito parcial para obtenção do Título de Doutor(a) em \imprimirmestreem. Área de concentração: \imprimirareadeconcentracaomestrado. \\
 }
 
 \newcommand{\preambulotccgraduacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Trabalho de Conclusão de Curso apresentado ao curso de \imprimirhabilitacaodotitulo\ em \imprimirgraduacaoem\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) -- \textit{Campus} \imprimircampus, como requisito parcial para obtenção do Título de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
 }
 
 \newcommand{\preambulotccespecializacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Especialização em \imprimirespecializacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção da certificação de especialista em \imprimirespecializacaoem.
-%Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Trabalho de Conclusão de Curso de Especialização apresentado ao curso de \imprimirespecializacaoem\ do \imprimirprogramaespecializacao\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) --	\textit{Campus} \imprimircampus, como requisito parcial para obtenção do Título de Especialista em \imprimirespecializacaoem. Área de concentração: \imprimirareadeconcentracaoespecializacao. \\
 }
 
 \preambulo{
-	\ifthenelse{\boolean{uecetex2@ehqualificacao}}{ %
-		Proposta de qualificação apresentada ao Curso de \imprimirmestrado\  da \imprimiries\ (\imprimiriessigla) como requisito parcial para a defesa de dissertação.
-	}{ %
-		\ifthenelse{\boolean{uecetex2@ehdissertacao}}{ %
-			\preambulodissertacao %	
+	\ifthenelse{\boolean{ifcetex2@ehdissertacao}}{ %
+		\preambulodissertacao %
+	}{
+		\ifthenelse{\boolean{ifcetex2@ehtese}}{ %
+			\preambulotese %	
 		}{
-			\ifthenelse{\boolean{uecetex2@ehtese}}{ %
-				\preambulotese	 %
+			\ifthenelse{\boolean{ifcetex2@ehtccespecializacao}}{ %
+				\preambulotccespecializacao %
 			}{
-				\ifthenelse{\boolean{uecetex2@ehtccgraduacao}}{ %
-					\preambulotccgraduacao	 %
-				}{
-					\preambulotccespecializacao %
-				}
+				\preambulotccgraduacao %
 			}
 		}
-	} %	
+	}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
