@@ -637,17 +637,18 @@
 
 \makeatletter
 \renewcommand{\folhaderostocontent}{
+	
 	\begin{center}
 		\normalsize\MakeUppercase\imprimirautor\par
-		\vspace{6.5cm}\par
+		\vspace{5\onelineskip}\par
 		\normalsize\MakeUppercase\imprimirtitulo
 	\end{center}
 	
-	\vspace{2.5cm}
+	\vspace{5\onelineskip}
 	
-	%Retira o espaço do parágrafo
-	\hspace*{-2cm}
-	%Adiciona o espaço da margem
+	% Retira o espaço do parágrafo
+	\hspace*{-1.25cm}
+	% Adiciona o espaço da margem
 	\hspace*{8cm}	
 	\begin{minipage}{8cm}
 		\begin{SingleSpace}
@@ -662,8 +663,9 @@
 	\end{minipage}
 	
 	\vfill
+	
 	\centering
-	\normalsize\MakeUppercase\imprimirlocal \par
+	\normalsize\MakeUppercase\imprimirlocal\ -- \imprimiruf\par
 	\normalsize\imprimirdata	
 }
 \makeatother
