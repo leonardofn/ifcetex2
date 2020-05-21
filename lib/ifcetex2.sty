@@ -57,16 +57,16 @@
 % Define a distância da margem esquerda do parágrafo
 \setlength{\parindent}{1.25cm}
 
-% Espacamentos nos titulos:
+% Espacamentos nos títulos:
 % chapter
-\setlength{\beforechapskip}{-\onelineskip} %com 0 nao funcionou
+\setlength{\beforechapskip}{-\onelineskip} % com 0 nao funcionou
 \setlength{\afterchapskip}{\onelineskip} % antes do titulo de capitulo
 %\setlength\beforechapskip{-18pt}
 %\setlength{\afterchapskip}{2cm}
 
 % section
-%\setbeforesecskip{\onelineskip}
-\setbeforesecskip{18pt}
+\setbeforesecskip{\onelineskip}
+%\setbeforesecskip{18pt}
 \setaftersecskip{\onelineskip}
 
 % subsection
@@ -81,24 +81,24 @@
 \setbeforeparaskip{\onelineskip}
 \setafterparaskip{\onelineskip}
 
-% Estilo do chapter 1
-\renewcommand{\ABNTEXchapterfont}{\bfseries}
-\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+% Estilo do chapter X
+\renewcommand{\ABNTEXchapterfont}{}
+\renewcommand{\ABNTEXchapterfontsize}{\bfseries}
 
-% Estilo da section 1.1
-\renewcommand{\ABNTEXsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+% Estilo da section X.X
+\renewcommand{\ABNTEXsectionfont}{\ABNTEXchapterfont}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize\bfseries}
 
-% Estilo da subsection 1.1.1
-\renewcommand{\ABNTEXsubsectionfont}{\bfseries}
-\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+% Estilo da section X.X.X
+\renewcommand{\ABNTEXsubsectionfont}{\ABNTEXsectionfont}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize\itshape\bfseries}
 
-% Estilo da subsection 1.1.1.1
-\renewcommand{\ABNTEXsubsubsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+% Estilo da section X.X.X.X
+\renewcommand{\ABNTEXsubsubsectionfont}{\ABNTEXsubsectionfont}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize\itshape}
 
-% Estilo da subsection 1.1.1.1
-\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont\itshape}
+% Estilo da section X.X.X.X.X
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\ABNTEXsubsectionfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
 % Margen da legenda da figura e da tabela
