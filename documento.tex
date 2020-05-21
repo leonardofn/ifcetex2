@@ -24,135 +24,124 @@
 %%                                                                    %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Carregando preâmbulo do documento
 \input{lib/preambulo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Configuracoes do ueceTeX2              %%
+%%          Configurações do IFCETeX2              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Opcoes disponiveis
-
-%\trabalhoacademico{tccgraduacao}
+% Opções disponíveis
+\trabalhoacademico{tccgraduacao}
 %\trabalhoacademico{tccespecializacao}
-\trabalhoacademico{dissertacao}
+%\trabalhoacademico{dissertacao}
 %\trabalhoacademico{tese}
-
-% Define se o trabalho eh uma qualificacao
-% Coloque 'nao' para versao final do trabalho
-
-\ehqualificacao{nao}
 
 % Remove as bordas vermelhas e verdes do PDF gerado
 % Coloque 'sim' pare remover
-
 \removerbordasdohyperlink{sim} 
 
 % Adiciona a cor Azul a todos os hyperlinks
-
 \cordohyperlink{nao}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%          Informação sobre a IES                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ies{Universidade Estadual do Ceará}
-\iessigla{UECE}
-\centro{Centro de Ciências e Tecnologia}
+\ies{Instituto Federal de Educação, Ciência e Tecnologia do Ceará}
+\campus{Tauá}
+\uf{CE}
+\iessigla{IFCE}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%        Informação para TCC de Graduacao         %%
+%%        Informações para TCC de Graduação        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \graduacaoem{Ciência da Computação}
-\habilitacao{bacharel} % Pode colocar tambem 'licenciada'
+\habilitacaodotitulo{Bacharelado} % Pode inserir também 'Linciatura' e 'Tecnologia'
+\habilitacao{Bacharel} % Pode inserir também 'Tecnólogo(a)' e 'Licenciado(a)'
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%     Informação para TCC de Especializacao       %%
+%%     Informações para TCC de Especialização      %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \especializacaoem{Alfabetização de Crianças}
+\programaespecializacao{Programa de Pós-Graduação em Alfabetização de Crianças}
+\areadeconcentracaoespecializacao{Alfabetização de Crianças}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%         Informação para Dissertacao             %%
+%%         Informações para Dissertação            %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\programamestrado{Programa de Pós-Graduação em Ciência da Computação}
-\nomedomestrado{Mestrado Acadêmico em Ciência da Computação}
 \mestreem{Ciência da Computação}
+\programamestrado{Programa de Pós-Graduação em Ciência da Computação}
 \areadeconcentracaomestrado{Ciência da Computação}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%               Informação para Tese              %%
+%%               Informações para Tese             %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\programadoutorado{Programa de Pós-Graduação em Saúde Coletiva}
-\nomedodoutorado{Doutorado em Saúde Coletiva}
 \doutorem{Saúde Coletiva}
+\programadoutorado{Programa de Pós-Graduação em Saúde Coletiva}
 \areadeconcentracaodoutorado{Saúde Coletiva}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Informação relacionadas ao trabalho     %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\autor{Nome Sobrenome}
+\autor{Nome do autor}
 \titulo{Título do Trabalho}
-\data{2017}
-\local{Fortaleza -- Ceará}
-
-% Exemplo: \dataaprovacao{01 de Janeiro de 2012}
-\dataaprovacao{}
+\data{2020}
+\local{Tauá}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%     Informação sobre o Orientador       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\orientador{Nome do seu Orientador}
-\orientadories{Universidade Estadual do Ceará – UECE}
-\orientadorcentro{Centro de Ciências e Tecnologia - CCT}
+\orientador{Nome do Orientador}
+\orientadories{Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)}
 \orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%      Informação sobre o Co-orientador   %%
+%%      Informação sobre o Coorientador   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Deixe o nome do coorientador em branco para remover do documento
 
-\coorientador{}
-\coorientadories{Universidade Co-orientador - SIGLA}
-\coorientadorcentro{Centro do Co-orientador - SIGLA}
+\coorientador{Nome do Coorientador}
+\coorientadories{Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)}
 \coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%      Informação sobre a banca           %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Atenção! Deixe o nome do membro da banca para remover da folha de aprovacao
-
 % Exemplo de uso:
 % \membrodabancadois{Prof. Dr. Fulano de Tal}
-% \membrodabancadoisies{Universidade Estadual do Ceará - UECE}
+% \membrodabancadoisies{Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)}
+
+% Atenção! Deixe o nome do membro da banca vazio para remover da folha de aprovacao
+% Exemplo:
+% \membrodabancadois{}
+% \membrodabancadoisies{Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)}
 
 \membrodabancadois{Membro da Banca Dois}
-\membrodabancadoiscentro{Faculdade de Filosofia Dom Aureliano Matos – FAFIDAM}
-\membrodabancadoisies{Universidade do Membro da Banca Dois - SIGLA}
+\membrodabancadoisies{Universidade do Membro da Banca Dois (SIGLA)}
+
 \membrodabancatres{Membro da Banca Três}
-\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
+\membrodabancatresies{Universidade do Membro da Banca Três (SIGLA)}
+
 \membrodabancaquatro{Membro da Banca Quatro}
-\membrodabancaquatrocentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancaquatroies{Universidade do Membro da Banca Quatro - SIGLA}
+\membrodabancaquatroies{Universidade do Membro da Banca Quatro (SIGLA)}
+
 \membrodabancacinco{Membro da Banca Cinco}
-\membrodabancacincocentro{Teste}
-\membrodabancacincoies{Universidade do Membro da Banca Cinco - SIGLA}
-\membrodabancaseis{Membro da Banca Seis}
-\membrodabancaseiscentro{}
-\membrodabancaseisies{Universidade do Membro da Banca Seis - SIGLA}
+\membrodabancacincoies{Universidade do Membro da Banca Cinco (SIGLA)}
 
 \begin{document}	
-
+	
 	% Se o seu trabalho é em ingles, descomente a linha a seguir
 	%\selectlanguage{english}
-
+	
 	% Elementos pré-textuais
 	\imprimircapa
 	\imprimirfolhaderosto{}
@@ -166,14 +155,11 @@
 	\imprimirabstract{elementos-pre-textuais/abstract}
 	\imprimirlistadeilustracoes
 	\imprimirlistadetabelas
-	\imprimirlistadequadros
-	\imprimirlistadealgoritmos
-	\imprimirlistadecodigosfonte
 	\imprimirlistadeabreviaturasesiglas	
 	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
 	\imprimirsumario
 	
-	%Elementos textuais
+	% Elementos textuais
 	\textual
 	\input{elementos-textuais/introducao}
 	\input{elementos-textuais/fundamentacao-teorica}
@@ -182,18 +168,18 @@
 	\input{elementos-textuais/resultados}
 	\input{elementos-textuais/conclusao}
 	
-	%Elementos pós-textuais	
+	% Elementos pós-textuais	
 	\bibliography{elementos-pos-textuais/referencias}
 	\imprimirglossario	
 	\imprimirapendices
-		% Adicione aqui os apendices do seu trabalho
-		\input{elementos-pos-textuais/apendices/historico-de-mudancas}
-		\input{elementos-pos-textuais/apendices/lorem-ipsum}
-		\input{elementos-pos-textuais/apendices/termo-de-fiel-depositario}	
+	% Adicione aqui os apendices do seu trabalho
+	\input{elementos-pos-textuais/apendices/historico-de-mudancas}
+	\input{elementos-pos-textuais/apendices/lorem-ipsum}
+	\input{elementos-pos-textuais/apendices/termo-de-fiel-depositario}	
 	\imprimiranexos
-		% Adicione aqui os anexos do seu trabalho
-		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
-		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
+	% Adicione aqui os anexos do seu trabalho
+	\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
+	\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
 	\imprimirindice
-
+	
 \end{document}
