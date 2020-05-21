@@ -1160,37 +1160,27 @@
 %%               Apendices             %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Define o titulo no sumario do Apendice para nao negrito
-\newcommand{\apendice}[1]{\chapter{\normalfont\uppercase{#1}}}
+% Define o título no sumário do Apendice para negrito, mas não o inclui no sumário
+\newcommand{\apendice}[1]{\chapter{\bfseries\uppercase{#1}}}
 
-% O nome APÊNDICES deve vir em página distinta, redigido em letras maiúsculas, centralizado, negritado, tamanho da fonte 12.
-\newcommand{\imprimirpaginaapendices}{ %
-	\newpage %
-	\addcontentsline{toc}{chapter}{\apendicesname} %
-	\begin{vplace}[0.7] %
-		\centering\textbf{\apendicesname} %
-	\end{vplace} %
-	\clearpage
-}
-
-% Altera a fonte da letra titulo do apendice para nao negrito
+% Altera a fonte da letra titulo do apendice para negrito
 \renewcommand{\chaptitlefont}{ %
 	\ifthenelse{\boolean{abntex@apendiceousecao}}{ %
-		\normalfont\normalsize %
+		\bfseries\normalsize %
 	}{%
 		\ABNTEXchapterfont\ABNTEXchapterfontsize %
 	}%
 }
 
-% Retira o negrito do apêndice e o coloca alinhado a esquerda
+% Retira o negrito do apêndice e o coloca centralizado
 \renewcommand{\printchaptertitle}[1]{%
 	\chaptitlefont%
 	\ifthenelse{\boolean{abntex@innonumchapter}}{\centering\ABNTEXchapterupperifneeded{#1}}{%
 		\ifthenelse{\boolean{abntex@apendiceousecao}}{%
-			\normalfont
+			\centering\bfseries
 			\settowidth{\chapternamenumlength}{\printchaptername\printchapternum\afterchapternum}%
 			\hspace{-0.3cm} %
-			#1 %	\ABNTEXchapterupperifneeded{#1}%
+			#1 	%\ABNTEXchapterupperifneeded{#1}%
 		}{%
 			\settowidth{\chapternamenumlength}{\printchaptername\printchapternum\afterchapternum}%
 			\parbox[t]{\columnwidth-\chapternamenumlength}{\ABNTEXchapterupperifneeded{#1}}
@@ -1199,14 +1189,13 @@
 }
 
 \newcommand{\imprimirapendices}{ %
-	\imprimirpaginaapendices
 	\apendices %
-	% Retira o negrito da palavra "Apendice"
-	\PRIVATEapendiceconfig{\normalfont\apendicename}{\normalfont\apendicesname} %
+	%  Negrito na palavra "Apendice"
+	\PRIVATEapendiceconfig{\bfseries\apendicename}{\bfseries\apendicesname} %
 	
 }
 
-% Correcao do problema de espacamento entre as palavras
+% Correção do problema de espacamento entre as palavras
 \renewcommand{\printchapternum}{%
 	\tocprintchapter
 	\setboolean{abntex@innonumchapter}{false}
@@ -1217,7 +1206,7 @@
 	\space\thechapter\space%
 	\ifthenelse{\boolean{abntex@apendiceousecao}}{%
 		\tocinnonumchapter
-		~\textendash~%
+		~\textemdash~%
 	}{} % else
 }
 
@@ -1230,18 +1219,19 @@
 			\def\f@rtoc{%
 				\texorpdfstring{\tempf@rtoc}{\tempf@rtoc}}%
 		}{
+			\let\tempf@rtoc\f@rtoc%
+			\def\f@rtoc{%
+				\texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
+		}
+	}
+	\settocpreprocessor{part}{%
 		\let\tempf@rtoc\f@rtoc%
 		\def\f@rtoc{%
 			\texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
 	}
-}
-\settocpreprocessor{part}{%
-	\let\tempf@rtoc\f@rtoc%
-	\def\f@rtoc{%
-		\texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
-}
 }{}
 \makeatother
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%           Número das Páginas        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1259,25 +1249,13 @@
 %%                Anexos               %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-% Define o titulo no sumario do Anexo para nao negrito
-\newcommand{\anexo}[1]{\chapter{\normalfont\uppercase{#1}}}
-
-% O nome ANEXOS deve vir em página distinta, redigido em letras maiúsculas, centralizado, negritado, tamanho da fonte 12.
-\newcommand{\imprimirpaginaanexo}{ %
-	\newpage %
-	\addcontentsline{toc}{chapter}{\anexosname} %
-	\begin{vplace}[0.7] %
-		\centering\textbf{\anexosname} %
-	\end{vplace} %
-	\clearpage
-}
+% Define o titulo no sumario do Anexo para negrito, mas não o inclui no sumário 
+\newcommand{\anexo}[1]{\chapter{\bfseries\uppercase{#1}}}
 
 \newcommand{\imprimiranexos}{ %
-	\imprimirpaginaanexo
 	\anexos %
 	% Retira o negrito da palavra "Apendice"
-	\PRIVATEapendiceconfig{\normalfont\anexoname}{\normalfont\anexosname} %
+	\PRIVATEapendiceconfig{\bfseries\anexoname}{\bfseries\anexosname} %
 	
 }
 
