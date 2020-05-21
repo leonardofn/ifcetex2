@@ -683,159 +683,171 @@
 % Espaço entre uma assintura e outra
 \setlength{\ABNTEXsignskip}{\onelineskip}
 
+% MESTRADO
 \newcommand{\imprimirfolhadeaprovacaotese}{
-	% Define o comprimento da linha das assinaturas na Folha de Aprovacao
-	\setlength{\ABNTEXsignwidth}{8cm}
-	
-	% Espaço entre uma assintura e outra
-	\setlength{\ABNTEXsignskip}{18pt}
-
 	\begin{center}
 		\MakeUppercase{\imprimirautor}\par
-		\vspace{\onelineskip}
-		\vspace{\onelineskip}
+		\vspace{3\onelineskip}
 		\MakeUppercase{\imprimirtitulo}
 	\end{center}
 	
-	\vspace{\onelineskip}
-	\vspace{\onelineskip}
+	\vspace{2\onelineskip}
 	
-	%Retira o espaço do parágrafo
-	\hspace*{-2cm}
-	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{7.5cm}
-		\begin{SingleSpace}
-			\imprimirpreambulo \\			
-		\end{SingleSpace}		
-	\end{minipage}
-
-	\vspace{\onelineskip}
-		
-	\noindent Aprovada em: \imprimirdataaprovacao
-	
-	\vspace{\onelineskip}
-	
-	\begin{center}
-		BANCA EXAMINADORA
-	\end{center}
-	
-	\vspace{\onelineskip}
-
-	% Membro Um da banca é sempre o Orientador
-	% Membro Dois da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimircoorientador}{
-		\hspace*{-2.5cm}
-		\assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}		
-		\hspace*{0.7cm} 
-		\assinatura*{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
-		
-		\hspace*{-2.6cm}
-		% Membro Três da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancadois}{
-			\assinatura*{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
-		}{}
-		\hspace*{0.7cm} 		
-		% Membro Três da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancatres}{
-			\assinatura*{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
-		}{}
-		\hspace*{-0.6cm} 
-		% Membro Quatro da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancaquatro}{
-			\assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
-		}{}	
-		\hspace*{0.7cm} 
-		\ifnotempty{\imprimirmembrodabancacinco}{
-			\assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
-		}{}
-	}{
-		% Espaço entre uma assintura e outra
-		\setlength{\ABNTEXsignskip}{2pt}
-		\hspace*{-2.5cm}
-		\assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}		
-		\hspace*{0.7cm} 
-		% Membro Três da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancadois}{
-			\assinatura*{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
-		}{}
-		
-		\hspace*{-2.6cm}		
-		% Membro Três da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancatres}{
-			\assinatura*{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
-		}{}		
-		\hspace*{0.7cm} 
-		% Membro Quatro da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancaquatro}{
-			\assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
-		}{}
-		
-		\hspace*{-2.65cm}
-		\ifnotempty{\imprimirmembrodabancacinco}{
-			\assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
-		}{}
-		\hspace*{0.7cm} 
-		% Membro Quatro da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancaseis}{
-			\assinatura*{\imprimirmembrodabancaseis \\ \imprimirmembrodabancaseisies}
-		}{}
-	}
-	\pagebreak	
-}
-
-\newcommand{\imprimirfolhadeaprovacaodissertacao}{
-
-	\begin{center}
-		\MakeUppercase{\imprimirautor}\par
-		\vspace{\onelineskip}
-		\vspace{\onelineskip}
-		\MakeUppercase{\imprimirtitulo}
-	\end{center}
-	
-	\vspace{\onelineskip}
-	\vspace{\onelineskip}
-	
-	%Retira o espaço do parágrafo
-	\hspace*{-2cm}
-	%Adiciona o espaço da margem
+	% Retira o espaço do parágrafo
+	\hspace*{-1.25cm}
+	% Adiciona o espaço da margem
 	\hspace*{8cm}	
 	\begin{minipage}{8cm}
 		\begin{SingleSpace}
-			\imprimirpreambulo \\			
+			\imprimirpreambulo			
 		\end{SingleSpace}		
 	\end{minipage}
-
+	
 	\vspace{\onelineskip}
-		
-	\noindent Aprovada em: \imprimirdataaprovacao
+	
+	\noindent Aprovada em: \underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}.
 	
 	\vspace{\onelineskip}
 	
 	\begin{center}
 		BANCA EXAMINADORA
 	\end{center}
-		\vspace{\onelineskip}
-
-	% Membro Um da banca é sempre o Orientador
-	\assinatura{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}
 	
-	% Membro Dois da banca pode ser o coorientador ou outro membro
+	\vspace{-\onelineskip}
+	
+	% Membro Um da banca é sempre o Orientador
+	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\  \imprimirorientadories}
+	
 	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
+		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
 	}
 	
-	% Membro Três da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancadois}{
 		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
 	}
-		
-	% Membro Três da banca pode ser o coorientador ou outro membro
+	
 	\ifnotempty{\imprimirmembrodabancatres}{
 		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
 	}
 	
-	% Membro Quatro da banca pode ser o coorientador ou outro membro
+	\ifnotempty{\imprimirmembrodabancaquatro}{
+		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
+	}
+	
+	\ifnotempty{\imprimirmembrodabancacinco}{
+		\assinatura{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
+	}
+	
+	\pagebreak
+}
+
+% DISSERTAÇÃO
+\newcommand{\imprimirfolhadeaprovacaodissertacao}{
+	
+	\begin{center}
+		\MakeUppercase{\imprimirautor}\par
+		\vspace{3\onelineskip}
+		\MakeUppercase{\imprimirtitulo}
+	\end{center}
+	
+	\vspace{2\onelineskip}
+	
+	% Retira o espaço do parágrafo
+	\hspace*{-1.25cm}
+	% Adiciona o espaço da margem
+	\hspace*{8cm}	
+	\begin{minipage}{8cm}
+		\begin{SingleSpace}
+			\imprimirpreambulo			
+		\end{SingleSpace}		
+	\end{minipage}
+	
+	\vspace{\onelineskip}
+	
+	\noindent Aprovada em: \underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}.
+	
+	\vspace{\onelineskip}
+	
+	\begin{center}
+		BANCA EXAMINADORA
+	\end{center}
+	
+	\vspace{-\onelineskip}
+	
+	% Membro Um da banca é sempre o Orientador
+	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\  \imprimirorientadories}
+	
+	\ifnotempty{\imprimircoorientador}{
+		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
+	}
+	
+	\ifnotempty{\imprimirmembrodabancadois}{
+		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
+	}
+	
+	\ifnotempty{\imprimirmembrodabancatres}{
+		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
+	}
+	
+	\ifnotempty{\imprimirmembrodabancaquatro}{
+		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
+	}
+	
+	\ifnotempty{\imprimirmembrodabancacinco}{
+		\assinatura{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
+	}	
+	
+	\pagebreak
+}
+
+% ESPECIALIZACÃO (TCCE)
+\newcommand{\imprimirfolhadeaprovacaoespecializacao}{
+	
+	\begin{center}
+		\MakeUppercase{\imprimirautor}\par
+		\vspace{3\onelineskip}
+		\MakeUppercase{\imprimirtitulo}
+	\end{center}
+	
+	\vspace{2\onelineskip}
+	
+	% Retira o espaço do parágrafo
+	\hspace*{-1.25cm}
+	% Adiciona o espaço da margem
+	\hspace*{8cm}	
+	\begin{minipage}{8cm}
+		\begin{SingleSpace}
+			\imprimirpreambulo			
+		\end{SingleSpace}		
+	\end{minipage}
+	
+	\vspace{\onelineskip}
+	
+	\noindent Aprovado em: \underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}.
+	
+	\vspace{\onelineskip}
+	
+	\begin{center}
+		BANCA EXAMINADORA
+	\end{center}
+	
+	\vspace{-\onelineskip}
+	
+	% Membro Um da banca é sempre o Orientador
+	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\  \imprimirorientadories}
+	
+	\ifnotempty{\imprimircoorientador}{
+		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
+	}
+	
+	\ifnotempty{\imprimirmembrodabancadois}{
+		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
+	}
+	
+	\ifnotempty{\imprimirmembrodabancatres}{
+		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
+	}
+	
 	\ifnotempty{\imprimirmembrodabancaquatro}{
 		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
 	}	
@@ -843,81 +855,76 @@
 	\pagebreak
 }
 
+% TCC
 \newcommand{\imprimirfolhadeaprovacaotcc}{
-
+	
 	\begin{center}
 		\MakeUppercase{\imprimirautor}\par
-		\vspace{\onelineskip}
-		\vspace{\onelineskip}
+		\vspace{3\onelineskip}
 		\MakeUppercase{\imprimirtitulo}
 	\end{center}
 	
-	\vspace{\onelineskip}
-	\vspace{\onelineskip}
+	\vspace{2\onelineskip}
 	
-	%Retira o espaço do parágrafo
-	\hspace*{-2cm}
-	%Adiciona o espaço da margem
+	% Retira o espaço do parágrafo
+	\hspace*{-1.25cm}
+	% Adiciona o espaço da margem
 	\hspace*{8cm}	
 	\begin{minipage}{8cm}
 		\begin{SingleSpace}
-			\imprimirpreambulo \\			
+			\imprimirpreambulo			
 		\end{SingleSpace}		
 	\end{minipage}
-
+	
 	\vspace{\onelineskip}
-		
-	\noindent Aprovada em: \imprimirdataaprovacao
+	
+	\noindent Aprovado em: \underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}/\underline{\hspace{1.25cm}}.
 	
 	\vspace{\onelineskip}
 	
 	\begin{center}
 		BANCA EXAMINADORA
 	\end{center}
-		\vspace{\onelineskip}
-
+	
+	\vspace{-\onelineskip}
+	
 	% Membro Um da banca é sempre o Orientador
-	\assinatura{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadorcentro \\  \imprimirorientadories}
+	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\  \imprimirorientadories}
 	
-	% Membro Dois da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadorcentro\\ \imprimircoorientadories}
+		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
 	}
 	
-	% Membro Três da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancadois}{
-		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoiscentro \\ \imprimirmembrodabancadoisies}
-	}
-		
-	% Membro Três da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimirmembrodabancatres}{
-		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatrescentro \\ \imprimirmembrodabancatresies}
+		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
 	}
 	
-	% Membro Quatro da banca pode ser o coorientador ou outro membro
+	\ifnotempty{\imprimirmembrodabancatres}{
+		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
+	}
+	
 	\ifnotempty{\imprimirmembrodabancaquatro}{
-		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatrocentro \\ \imprimirmembrodabancaquatroies}
+		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
 	}	
 	
 	\pagebreak
 }
 
 \newcommand{\imprimirfolhadeaprovacao}{
-	\ifthenelse{\boolean{uecetex2@ehdissertacao}}{ %
-    	\imprimirfolhadeaprovacaodissertacao %	
-    }{
-    	\ifthenelse{\boolean{uecetex2@ehtese}}{ %
-    		\imprimirfolhadeaprovacaotese	 %
-    	}{
-    		\ifthenelse{\boolean{uecetex2@ehtccgraduacao}}{ %
-    			\imprimirfolhadeaprovacaotcc	 %
-    		}{
-    			\imprimirfolhadeaprovacaotcc
-    		}
-    	}
+	\ifthenelse{\boolean{ifcetex2@ehdissertacao}}{ %
+		\imprimirfolhadeaprovacaodissertacao %	
+	}{
+		\ifthenelse{\boolean{ifcetex2@ehtese}}{ %
+			\imprimirfolhadeaprovacaotese %
+		}{
+			\ifthenelse{\boolean{ifcetex2@ehtccespecializacao}}{ %
+				\imprimirfolhadeaprovacaoespecializacao	 %
+			}{
+				\imprimirfolhadeaprovacaotcc %
+			}
+		}
 	}
 }
-
 
 %============================================================
 %   Definição de comandos e parâmetros específicos e configuração de ambientes de teorema
