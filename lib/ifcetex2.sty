@@ -303,21 +303,6 @@
 \newcommand{\UECEfig}[3]{\IBGEtab{#1}{#2}{#3}}
 \newcommand{\UECEtab}[3]{\IBGEtab{#1}{#2}{#3}}
 
-% Ambiente para alineas e e subalineas (incisos) com ponto
-\newlist{alineascomponto}{itemize}{2}
-\setlist[alineascomponto,1]{label={$\bullet$},topsep=0pt,itemsep=0pt,leftmargin=\parindent+\labelwidth-\labelsep}%
-\setlist[alineascomponto,2]{label={--},topsep=0pt,itemsep=0pt,leftmargin=*}
-\newlist{subalineascomponto}{enumerate}{1}
-\setlist[subalineascomponto,1]{label={$\circ$},topsep=0pt,itemsep=0pt,leftmargin=*}%
-% ---
-
-% Ambiente para alineas e e subalineas (incisos) com numeros
-\newlist{alineascomnumero}{enumerate}{2}
-\setlist[alineascomnumero,1]{label={$\arabic*$.},topsep=0pt,itemsep=0pt,leftmargin=\parindent+\labelwidth-\labelsep}%
-\setlist[alineascomnumero,2]{label={--},topsep=0pt,itemsep=0pt,leftmargin=*}
-\newlist{subalineascomnumero}{enumerate}{1}
-\setlist[subalineascomnumero,1]{label={$\arabic*$.},topsep=0pt,itemsep=0pt,leftmargin=*}%
-% ---
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%              Funções                %%
