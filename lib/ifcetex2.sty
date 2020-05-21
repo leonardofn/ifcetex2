@@ -996,11 +996,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\imprimirerrata}[1]{%
-	\ifthenelse{\boolean{uecetex2@ehqualificacao}}{}{%
-		\begin{errata} %
-		\input{#1}%
-		\end{errata}%
-	}%
+	\begin{errata}%
+		\begin{flushleft}
+			\begin{SingleSpace}
+				\input{#1}%
+			\end{SingleSpace}
+		\end{flushleft}
+	\end{errata}%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
