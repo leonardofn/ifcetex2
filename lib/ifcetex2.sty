@@ -1025,21 +1025,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\imprimirepigrafe}[1]{
-	\ifthenelse{\boolean{uecetex2@ehqualificacao}}{}{
-		\vspace*{\fill}
-		\vfill
-		%Retira o espaço do parágrafo
-		\hspace*{-2cm}
-		%Adiciona o espaço da margem
-		\hspace*{8cm}	
-		\begin{minipage}{8cm}
-			\input{#1}
-			\raggedleft{(\imprimirautordaepigrafe) \par}
-		\end{minipage}		
-		\pagebreak
-	}
+	\vspace*{\fill}
+	\vfill
+	% Retira o espaço do parágrafo
+	\hspace*{-1.25cm}
+	% Adiciona o espaço da margem
+	\hspace*{8cm}	
+	\begin{minipage}{8cm}
+		\input{#1}
+		\raggedleft{(\imprimirautordaepigrafe)\par}
+	\end{minipage}		
+	\pagebreak
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%          Ficha Catalografica        %%
