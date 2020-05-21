@@ -6,24 +6,27 @@
 
 O autor \cite{lamport1986latex} e \cite{Maia2011} \lipsum[2] 
 
-\begin{table}[h!]
-	\Caption{\label{tabela-ibge} Um Exemplo de tabela alinhada que pode ser longa ou curta, conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE.}%
-	\IBGEtab{}{%
+\begin{table}[H]
+	\IFCEtab{
+		\Caption{\label{tabela-ibge} Um Exemplo de tabela alinhada que pode ser longa ou curta, conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE. conforme padrão IBGE.}
+	}{%
 		\begin{tabular}{ccc}
 			\toprule
 			Nome & Nascimento & Documento \\
-			\midrule \midrule
+			\toprule
 			Maria da Silva & 11/11/1111 & 111.111.111-11 \\
 			Maria da Silva & 11/11/1111 & 111.111.111-11 \\
 			Maria da Silva & 11/11/1111 & 111.111.111-11 \\
 			\bottomrule
 		\end{tabular}%
 	}{%
-	\Fonte{Produzido pelos autores}%
-	\Nota{Esta éuma nota, que diz que os dados são baseados na
-		regressão linear.}%
-	\Nota[Anotações]{Uma anotação adicional, seguida de várias outras.}%
-}
+		\Fonte{Produzido pelos autores}%
+		\Nota{Esta é uma nota, que diz que os dados são baseados na
+			regressão linear. Esta é uma nota, que diz que os dados são baseados na
+			regressão linear. Esta é uma nota, que diz que os dados são baseados na
+			regressão linear.}%
+		\Nota[Anotações]{Uma anotação adicional, seguida de várias outras.}%
+	}
 \end{table}
 
 \cite{Huetal2000} \lipsum[2] 
@@ -35,14 +38,15 @@ O autor \cite{lamport1986latex} e \cite{Maia2011} \lipsum[2]
 
 \lipsum[12]
 
-\begin{table}[h!]	
+\begin{table}[H]	
 	\centering
-	\Caption{\label{tab:internal}Internal exon scores}	
-	\IBGEtab{}{
+	\IFCEtab{
+		\Caption{\label{tab:internal}Internal exon scores}
+	}{
 		\begin{tabular}{cll}
 			\toprule
 			Ranking & Exon Coverage & Splice Site Support\\
-			\midrule \midrule
+			\toprule
 			E1 & Complete coverage by a single transcript & Both splice sites\\
 			E2 & Complete coverage by more than a single transcript & Both splice sites\\
 			E3 & Partial coverage & Both splice sites\\
@@ -52,8 +56,8 @@ O autor \cite{lamport1986latex} e \cite{Maia2011} \lipsum[2]
 			\bottomrule
 		\end{tabular}
 	}{
-	\Fonte{os autores}
-}
+		\Fonte{os autores}
+	}
 \end{table}
 
 \lipsum[2] Referenciando a \autoref{tab:internal} \lipsum[2]
