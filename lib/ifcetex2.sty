@@ -120,7 +120,7 @@
 
 \addto\captionsbrazil{
 	\renewcommand{\bibname}{REFER\^ENCIAS}
-	\renewcommand{\indexname}{\'INDICE}
+	\renewcommand{\indexname}{\'INDICE DE ASSUNTO}
 	\renewcommand{\contentsname}{Sum\'ario \vspace{5pt}}
 	\renewcommand{\listadesimbolosname}{Lista de Símbolos}
 	\renewcommand{\lstlistlistingname}{Lista de Códigos-Fontes}%
@@ -1265,6 +1265,7 @@
 
 \newcommand{\imprimirindice}{ %
 	\printindex
+	\addcontentsline{toc}{chapter}{\indexname}
 }
 
 \newcommand{\citeautoronline}[1]{ %
