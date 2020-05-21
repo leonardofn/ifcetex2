@@ -245,29 +245,29 @@
 	}
 }
 
-% Adiciona o sexo do orientador e do co-orientador no documento atraves
+% Adiciona o sexo do orientador e do coorientador no documento através
 % do artigo "a".
 
-\provideboolean{uecetex2@orientadorfeminino}
-\provideboolean{uecetex2@coorientadorfeminino}
+\provideboolean{ifcetex2@orientadorfeminino}
+\provideboolean{ifcetex2@coorientadorfeminino}
 
-\setboolean{uecetex2@orientadorfeminino}{false}
-\setboolean{uecetex2@coorientadorfeminino}{false}
+\setboolean{ifcetex2@orientadorfeminino}{false}
+\setboolean{ifcetex2@coorientadorfeminino}{false}
 
 \newcommand{\orientadorfeminino}[1]{
-	 \ifthenelse{\equal{#1}{sim}}{%
-	 	\setboolean{uecetex2@orientadorfeminino}{true}
-	 }
+	\ifthenelse{\equal{#1}{sim}}{%
+		\setboolean{ifcetex2@orientadorfeminino}{true}
+	}
 }
 
 \newcommand{\coorientadorfeminino}[1]{
 	\ifthenelse{\equal{#1}{sim}}{%
-		\setboolean{uecetex2@coorientadorfeminino}{true}
+		\setboolean{ifcetex2@coorientadorfeminino}{true}
 	}
 }
 
 \newcommand{\artigoorientador}{ %
-	\ifthenelse{\boolean{uecetex2@orientadorfeminino}}{ %
+	\ifthenelse{\boolean{ifcetex2@orientadorfeminino}}{ %
 		\unskip Orientadora\ignorespaces%
 	}{ %
 		\unskip Orientador\ignorespaces%
@@ -275,15 +275,15 @@
 }
 
 \newcommand{\artigocoorientador}{ %
-	\ifthenelse{\boolean{uecetex2@coorientadorfeminino}}{ %
-		Co-Orientadora\ignorespaces%
+	\ifthenelse{\boolean{ifcetex2@coorientadorfeminino}}{ %
+		Coorientadora\ignorespaces%
 	}{ %
-		Co-Orientador\ignorespaces%
+		Coorientador\ignorespaces%
 	} %
 }
 
 \newcommand{\artigoorientadorcomparenteses}{ %
-	\ifthenelse{\boolean{uecetex2@orientadorfeminino}}{ %
+	\ifthenelse{\boolean{ifcetex2@orientadorfeminino}}{ %
 		(Orientadora)\ignorespaces%
 	}{ %
 		(Orientador)\ignorespaces%
@@ -291,10 +291,10 @@
 }
 
 \newcommand{\artigocoorientadorcomparenteses}{ %
-	\ifthenelse{\boolean{uecetex2@coorientadorfeminino}}{ %
-		(Co-Orientadora)\ignorespaces%
+	\ifthenelse{\boolean{ifcetex2@coorientadorfeminino}}{ %
+		(Coorientadora)\ignorespaces%
 	}{ %
-		(Co-Orientador)\ignorespaces%
+		(Coorientador)\ignorespaces%
 	} %
 }
 
