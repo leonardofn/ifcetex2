@@ -123,19 +123,13 @@
 	\renewcommand{\indexname}{\'INDICE}
 	\renewcommand{\contentsname}{Sum\'ario \vspace{5pt}}
 	\renewcommand{\listadesimbolosname}{Lista de Símbolos}
-	\renewcommand{\lstlistingname}{Código-fonte}% Listing -> Algorithm
 	\renewcommand{\lstlistlistingname}{Lista de Códigos-Fontes}%
-	\renewcommand{\listalgorithmcfname}{Lista de Algoritmos}%
-	\renewcommand{\algorithmcfname}{Algoritmo}%
 	\renewcommand{\apendicesname}{AP\^ENDICES}%
 	\renewcommand{\anexosname}{ANEXOS}%
 }
 
 \addto\captionsenglish{% ingles
-	\renewcommand{\lstlistingname}{Code}% Listing -> Algorithm
 	\renewcommand{\lstlistlistingname}{List of Source Codes}%
-	\renewcommand{\listalgorithmcfname}{Lists of Algorithms}%
-	\renewcommand{\algorithmcfname}{Algorithm}%
 	\renewcommand{\apendicesname}{APPENDICES}%
 	\renewcommand{\anexosname}{ANNEXES}%
 	\renewcommand{\glossarioname}{GLOSSARY}%
@@ -150,41 +144,6 @@
 	\renewcommand{\definicaoname}{Definition}
 	\renewcommand{\questaoname}{Question}
 }
-
-% Por algum motivo, o algorithm2e estava pegando algumas palavras do espanhol.
-% Acredito que seja porque os comandos \para seja idêntico nos dois idiomas.
-% Esses comando resolvem o problema
-\SetKwFor{Para}{para}{fa\c{c}a}{fim para}
-\SetKwBlock{Inicio}{inicio}{fim}
-
-% Na versao mais nova do algorithm2e (versao 5.1) aparentemente foram adicionados
-% algumas palavras com acentuacao e por isso estava causando erro no template. 
-% Os comandos a seguir foram copiados da versao mais nova para tentar resolver o problema.
-\SetKwInput{Entrada}{Entrada}%
-\SetKwInput{Saida}{Sa\'{i}da}%
-\SetKwInput{Dados}{Dados}%
-\SetKwInput{Resultado}{Resultado}%
-\SetKw{Ate}{at\'{e}}
-\SetKw{KwRetorna}{retorna}%
-\SetKw{Retorna}{retorna}%
-\SetKwBlock{Inicio}{in\'{i}cio}{fim}%
-\SetKwRepeat{Repita}{repita}{at\'{e}}%
-%
-\SetKwIF{Se}{SenaoSe}{Senao}{se}{ent\~{a}o}{sen\~{a}o se}{sen\~{a}o}{fim se}%
-\SetKwSwitch{Selec}{Caso}{Outro}{selecione}{fa\c{c}a}{caso}{sen\~{a}o}{fim caso}{fim selec}%
-\SetKwFor{Para}{para}{fa\c{c}a}{fim para}%
-\SetKwFor{ParaPar}{para}{fa\c{c}a em paralelo}{fim para}
-\SetKwFor{ParaCada}{para cada}{fa\c{c}a}{fim para cada}%
-\SetKwFor{ParaTodo}{para todo}{fa\c{c}a}{fim para todo}%
-\SetKwFor{Enqto}{enquanto}{fa\c{c}a}{fim enqto}%
-
-% Espaco entre as linhas do algoritmo
-\newcommand{\SetSpacedAlgorithm}{
-	\linespread{1.35}\selectfont
-}
-
-% Espaco entre o caption e o algoritmo
-%\SetAlCapSkip{\onelineskip}
 
 % Distance between floats on the top or the bottom and the text;
 \setlength{\textfloatsep}{18pt plus 2pt minus 2pt}
@@ -334,11 +293,11 @@
 	\addtolength\belowdisplayshortskip{\onelineskip}
 }
 
-% Altera o nome do algoritmo
-\SetKwBlock{Inicio}{início}{fim}
-
 % Numeracao da tabela comeca em 1
 \setcounter{table}{0}
+
+% Equações são númeradas de forma contínua
+\counterwithout{equation}{chapter}
 
 % Comandos para inserir figuras e tabelas
 \newcommand{\UECEfig}[3]{\IBGEtab{#1}{#2}{#3}}
@@ -1140,34 +1099,6 @@
 	\begin{KeepFromToc} %
 		\listoffigures\pagebreak %
 	\end{KeepFromToc} %
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%         Lista de Algoritmos         %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newlength\myAlgoLen
-
-\begingroup
-\makeatletter
-\let\newcounter\@gobble\let\setcounter\@gobbletwo
-\globaldefs\@ne \let\c@loadepth\@ne
-\newlistof{algorithms}{loa}{\listalgorithmname}
-\newlistentry{algocf}{loa}{0}
-\makeatother
-\endgroup
-
-\renewcommand\cftalgocfpresnum{\algorithmcfname~}
-\settowidth\myAlgoLen{\cftalgocfpresnum\cftalgocfaftersnum}
-\addtolength\cftalgocfnumwidth{\myAlgoLen} %
-\renewcommand\cftalgocfaftersnum{\hfill\textendash\hfill}
-
-
-% A lista de Algoritmos não deve aparecer no sumário
-
-\newcommand{\imprimirlistadealgoritmos}{
-	\listofalgorithms
-	\pagebreak %
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

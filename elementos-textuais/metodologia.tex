@@ -28,53 +28,10 @@ O autor \cite{lamport1986latex} e \cite{Maia2011} \lipsum[2]
 
 \cite{Huetal2000} \lipsum[2] 
 
-\section{Exemplo de Algoritmos e Figuras}
-\label{sec:exemplo-de-algoritmos-e-figuras}
+\section{Exemplo de Figuras}
+\label{sec:exemplo-figuras}
 
 \lipsum[2]
-
-\begin{algorithm}[h!]
-	\SetSpacedAlgorithm
-	\caption{\label{exemplo-de-algoritmo}Como escrever algoritmos no \LaTeX2e}
-	\Entrada{o proprio texto}
-	\Saida{como escrever algoritmos com \LaTeX2e }
-	\Inicio{
-		inicializa\c{c}\~ao\;
-		\Repita{fim do texto}{
-			leia o atual\;
-			\Se{entendeu}{
-				vá para o próximo\;
-				próximo se torna o atual\;}
-			\Senao{volte ao início da seção\;}
-		}
-	}	
-\end{algorithm}
-
-\lipsum[2]
-%\begin{algorithm}[H]
-%	\Entrada{o proprio texto}
-%	\Saida{como escrever algoritmos com \LaTeX2e }
-%	\Inicio{
-%		inicializa\c{c}\~ao\;
-%		\Repita{fim do texto}{
-%			leia o atual\;
-%			\Se{entendeu}{
-%				vá para o próximo\;
-%				próximo se torna o atual\;}
-%			\Senao{volte ao início da seção\;}
-%		}
-%	}
-%	\caption{Exemplo de Algoritmo Versao 02}
-%\end{algorithm}
-
-%\begin{algorithm}
-%	\begin{algorithmic}
-%	\Entrada{o proprio texto}
-%	\Saida{como escrever algoritmos com \LaTeX2e }	
-%	\end{algorithmic}
-%\end{algorithm}
-
-Exemplo de alíneas com números:
 
 \begin{alineascomnumero}
 	\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum sed tortor nec viverra.
@@ -180,27 +137,7 @@ Ou então figuras podem ser incorporadas de arquivos externos, como é o caso da
 	
 \lipsum[7]
 
-\section{Usando Algoritmos}
-
 \lipsum[8]
-
-\begin{algorithm}[h!]
-	\SetSpacedAlgorithm
-	\caption{\label{alg:algoritmo_de_colonica_de_formigas}Algoritmo de Otimização por Colônia de Formiga}
-	\Entrada{Entrada do Algoritmo}
-	\Saida{Saida do Algoritmo}
-	\Inicio{
-		Atribua os valores dos parâmetros\;
-		Inicialize as trilhas de feromônios\;
-		\Enqto{não atingir o critério de parada}{
-			\Para{cada formiga}{
-				Construa as Soluções\;
-			}
-			Aplique Busca Local (Opcional)\;
-			Atualize o Feromônio\;
-		}	
-	}		
-\end{algorithm}
 
 \lipsum[9]
 
