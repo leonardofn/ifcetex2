@@ -1443,11 +1443,12 @@
 \setlength{\cftbeforechapterskip}{0pt}
 
 %\renewcommand\cftchapterfont{\normalsize}
-\renewcommand\cftsectionfont{\normalsize\normalfont}
-\renewcommand\cftsubsectionfont{\normalsize}
-\renewcommand\cftsubsubsectionfont{\normalsize\normalfont}
-% Altera a fonte da seção quinária
-\renewcommand*{\cftparagraphfont}{\normalsize\normalfont\itshape}
+\renewcommand\cftsectionfont{\normalfont\bfseries}
+\renewcommand\cftsubsectionfont{\normalsize\normalfont\bfseries\itshape}
+\renewcommand\cftsubsubsectionfont{\normalsize\normalfont\itshape}
+
+% Altera a fonte da seção quinária 1.1.1.1.1
+\renewcommand*{\cftparagraphfont}{\normalsize\normalfont}
 
 % Páginas do sumário não podem ser negrito.
 \renewcommand\cftchapterpagefont{\normalfont}
