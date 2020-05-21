@@ -39,6 +39,21 @@
 \input{elementos-pos-textuais/glossario}
 \input{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
 
+\AtBeginDocument{ %
+	% Adiciona os metadados ao documento gerado
+	\hypersetup{ %
+		pdftitle={\imprimirtitulo},%
+		pdfauthor={\imprimirautor}, %
+		pdfsubject={Powered by IFCETeX2 -- Acesse https://github.com/leonardofn/ifcetex2}, %
+		pdfcreator={pdflatex} %
+	}%
+	% Define a altura das equacoes matematicas
+	%	\abovedisplayskip=-1pt plus 3pt minus 9pt
+	%	\abovedisplayshortskip=0pt plus 3pt
+	%	\belowdisplayskip=18pt plus 3pt minus 9pt
+	\addtolength\belowdisplayshortskip{\onelineskip}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%       Formatação das Páginas        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -277,19 +292,6 @@
 	}
 }
 
-\AtBeginDocument{ %
-	% Adiciona os metadados do documento gerado
-	\hypersetup{ %
-		pdftitle={\imprimirtitulo},%
-		pdfauthor={\imprimirautor}, %
-		pdfsubject={Powered by ueceTeX2 - Acesse https://github.com/thiagodnf/uecetex2} %
-	}%
-	% Define a altura das equacoes matematicas
-%	\abovedisplayskip=-1pt plus 3pt minus 9pt
-%	\abovedisplayshortskip=0pt plus 3pt
-%	\belowdisplayskip=18pt plus 3pt minus 9pt
-	\addtolength\belowdisplayshortskip{\onelineskip}
-}
 % Altera o tamanho da fonte do contéudo das tabelas para 12
 \renewcommand{\IBGEtabfontsize}{\normalfont}
 
