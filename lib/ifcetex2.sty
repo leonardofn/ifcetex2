@@ -111,7 +111,6 @@
 % Retira espaço extra obsoleto entre as frases.
 %\frenchspacing
 
-\newcommand{\listofquadrosname}{Lista de Quadros}
 \newcommand{\glossarioname}{GLOSS\'ARIO}
 \newcommand{\teoremaname}{Teorema}
 \newcommand{\proposicaoname}{Proposição}
@@ -128,7 +127,6 @@
 	\renewcommand{\lstlistlistingname}{Lista de Códigos-Fontes}%
 	\renewcommand{\listalgorithmcfname}{Lista de Algoritmos}%
 	\renewcommand{\algorithmcfname}{Algoritmo}%
-	\renewcommand{\cftquadroname}{Quadro\space}%
 	\renewcommand{\apendicesname}{AP\^ENDICES}%
 	\renewcommand{\anexosname}{ANEXOS}%
 }
@@ -138,8 +136,6 @@
 	\renewcommand{\lstlistlistingname}{List of Source Codes}%
 	\renewcommand{\listalgorithmcfname}{Lists of Algorithms}%
 	\renewcommand{\algorithmcfname}{Algorithm}%
-	\renewcommand{\cftquadroname}{Chart\space}%
-	\renewcommand{\listofquadrosname}{List of Charts}%
 	\renewcommand{\apendicesname}{APPENDICES}%
 	\renewcommand{\anexosname}{ANNEXES}%
 	\renewcommand{\glossarioname}{GLOSSARY}%
@@ -344,10 +340,9 @@
 % Numeracao da tabela comeca em 1
 \setcounter{table}{0}
 
-% Comandos para inserir figuras, tabelas e quadros
+% Comandos para inserir figuras e tabelas
 \newcommand{\UECEfig}[3]{\IBGEtab{#1}{#2}{#3}}
 \newcommand{\UECEtab}[3]{\IBGEtab{#1}{#2}{#3}}
-\newcommand{\UECEqua}[3]{\IBGEtab{#1}{#2}{#3}}
 
 % Ambiente para alineas e e subalineas (incisos) com ponto
 \newlist{alineascomponto}{itemize}{2}
@@ -1067,32 +1062,6 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%         Lista de Quadro             %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Novo list of (listings) para QUADROS
-
-%\newcommand{\quadroname}{Quadro}
-%\newcommand{\listofquadrosname}{Lista de Quadros}
-
-\newfloat[chapter]{quadro}{loq}{\cftquadroname}
-\newlistof{listofquadros}{loq}{\listofquadrosname}
-\newlistentry{quadro}{loq}{0}
-
-% configurações para atender às regras da ABNT
-\counterwithout{quadro}{chapter}
-%\renewcommand{\cftquadroname}{\quadroname\space} 
-\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
-% agora a lista de quadro eh negrito
-\renewcommand{\cftquadrofont}{\bfseries}
-
-\newcommand{\imprimirlistadequadros}{ %
-	%\pdfbookmark[0]{\listofquadrosname}{loq} %
-	\listofquadros* %
-	\pagebreak %
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%         Lista de Códigos-fonte      %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1160,8 +1129,6 @@
 	\end{KeepFromToc} %
 	\pagebreak %
 }
-% agora a lista de quadro eh negrito
-\renewcommand{\cftlstlistingfont}{\bfseries}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%         Lista de Ilustrações        %%
@@ -1202,9 +1169,6 @@
 	\listofalgorithms
 	\pagebreak %
 }
-
-% agora a lista de quadro eh negrito
-\renewcommand{\cftalgocffont}{\bfseries}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%            Lista de Tabelas         %%
