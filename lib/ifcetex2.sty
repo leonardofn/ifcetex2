@@ -101,14 +101,6 @@
 \renewcommand{\ABNTEXsubsubsubsectionfont}{\ABNTEXsubsectionfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
-% Margen da legenda da figura e da tabela
-\captionsetup{
-	justification=centering,% Centraliza o caption
-	skip=0pt,                %Retira o espaco entre a figura/tabela e o caption
-	labelfont=bf, % A palavra 'Figure 1' agora eh negrito
-	font=bf	% O texto depois de 'Figure 1' agora eh negrito
-}
-
 % Remove o ponto final de cada entrada da 
 %lista de abreviaturas e siglas
 \renewcommand{\glspostdescription}{}
@@ -205,16 +197,20 @@
 \setlength{\intextsep}{18pt plus 2pt minus 2pt}
 
 \newcommand{\Caption}[1]{ %
-	\begin{Spacing}{1.5} %
-       	\caption{#1} %
-   	\end{Spacing} %
+	\begin{Spacing}{1.0}
+		\captionsetup{format=plain,singlelinecheck=false,skip=0pt} %
+		\caption{#1} %
+	\end{Spacing} %
 }
 
+% Comando para inserir a fonte (referência) da figura/tabela
 \newcommand{\Fonte}[2][\fontename]{ %
-%	\vspace{-3pt}
-	\vspace{8pt}
- 		\fonte[\normalfont{#1}]{\normalfont{#2}}
- 	\vspace{-5pt}
+	\vspace{0pt}
+	\begin{Spacing}{1.0}
+		% Alinha o texto a partir do primeira linha
+		\captionsetup{format=hang,singlelinecheck=false}
+		\fonte[{#1}]{#2}
+	\end{Spacing}
 }
 
 % Cria o comando para fazer notas e anotacoes na figura e na tabela
