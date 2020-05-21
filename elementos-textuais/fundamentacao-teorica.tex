@@ -8,15 +8,16 @@ Integer non lacinia magna. Aenean tempor lorem tellus, non sodales nisl commodo 
 
 \lipsum[10]
 
-	\begin{figure}[h!]
-		\centering
-		\Caption{\label{fig:exemplo-1} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo lectus et augue elementum varius.}	
-		\UECEfig{}{
-			\fbox{\includegraphics[width=8cm]{figuras/figura-1}}
-		}{
-			\Fonte{Elaborado pelo autor}
-		}	
-	\end{figure}
+\begin{figure}[H]
+	\centering
+	\IFCEfig{
+		\Caption{\label{fig:exemplo-1} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo lectus et augue elementum varius.}
+	}{
+		\includegraphics[scale=.9]{figuras/figura-1}
+	}{
+		\Fonte{Elaborado pelo autor}
+	}	
+\end{figure}
 	
 \lipsum[11]
 
@@ -26,15 +27,16 @@ Integer non lacinia magna. Aenean tempor lorem tellus, non sodales nisl commodo 
 
 Integer non lacinia magna. Aenean tempor lorem tellus, non sodales nisl commodo ut. Proin mattis placerat risus sit amet laoreet. Praesent sapien arcu, maximus ac fringilla efficitur, vulputate faucibus sem. Donec aliquet velit eros, sit amet elementum dolor pharetra eget. Integer eget mattis libero. Praesent ex velit, pulvinar at massa vel, fermentum dictum mauris. Ut feugiat accumsan augue, et ultrices ipsum euismod vitae
 
-	\begin{figure}[h!]
-		\centering
-		\Caption{\label{fig:exemplo-2} Maecenas luctus augue odio, sed tincidunt nunc posuere nec}	
-		\UECEfig{}{
-			\fbox{\includegraphics[width=8cm]{figuras/figura-2}}
-		}{
-			\Fonte{Elaborado pelo autor}			
-		}	
-	\end{figure}
+\begin{figure}[H]
+	\centering
+	\IFCEfig{
+		\Caption{\label{fig:exemplo-2}Maecenas luctus augue odio, sed tincidunt nunc posuere nec}
+	}{
+		\includegraphics[scale=.9]{figuras/figura-2}
+	}{
+		\Fonte{Elaborado pelo autor}			
+	}	
+\end{figure}
 
 Nunc ac pretium dui. Mauris aliquam dapibus nulla ac mattis. Aenean non tortor volutpat, varius lectus vitae, accumsan nibh. Cras pretium vestibulum enim, id ullamcorper tortor ultrices non. Integer sodales viverra faucibus. Curabitur at dui lacinia, rhoncus lacus at, blandit metus. Integer scelerisque non enim quis ornare.
 
@@ -63,15 +65,16 @@ Nunc ac pretium dui. Mauris aliquam dapibus nulla ac mattis. Aenean non tortor v
 
 Duis faucibus, enim quis tincidunt pellentesque, nisl leo varius nulla, vitae tempus dui mauris ac ante. Quisque purus lorem, pharetra sit amet lobortis eu, vehicula vitae purus. Ut varius, erat nec vehicula elementum, risus est tempus justo, nec vulputate augue leo egestas metus.
 
-	\begin{figure}[h!]
-		\centering
-		\Caption{\label{fig:exemplo-3} Ut posuere, ex quis sagittis auctor, magna massa euismod felis}	
-		\UECEfig{}{
-			\fbox{\includegraphics[width=8cm]{figuras/figura-2}}
-		}{
+\begin{figure}[H]
+	\centering	
+	\IFCEfig{
+		\Caption{\label{fig:exemplo-3} Ut posuere, ex quis sagittis auctor, magna massa euismod felis}
+	}{
+		\includegraphics[scale=.9]{figuras/figura-2}
+	}{
 		\Fonte{Elaborado pelo autor}			
 	}	
-	\end{figure}
+\end{figure}
 
 \lipsum[14]
 
