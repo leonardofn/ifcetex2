@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/leonardofn/ifcetex2/master/figuras/ifcetex2-logo.png)
+![alt tag](https://raw.githubusercontent.com/leonardofn/ifcetex2/ifcetex2/figuras/ifcetex2-logo.png)
 
 # ABNTeX2
 
