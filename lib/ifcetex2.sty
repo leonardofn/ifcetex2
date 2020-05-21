@@ -1010,14 +1010,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\imprimiragradecimentos}[1]{ 
-	\ifthenelse{\boolean{uecetex2@ehqualificacao}}{}{
-		\begin{agradecimentos}
-			\begin{paracol}{1}
-				\setlength{\parindent}{0pt}%
-				\input{#1}
-			\end{paracol}		
-		\end{agradecimentos}
-	}
+	\begin{agradecimentos}
+		\begin{paracol}{1}
+			\setlength{\parindent}{1.25cm}%
+			\input{#1}
+		\end{paracol}		
+	\end{agradecimentos}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
