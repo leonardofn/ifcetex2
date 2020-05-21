@@ -1123,30 +1123,23 @@
 %%              Glossário              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Glossario desenvolvido para a UECE
+% Glossario desenvolvido para o IFCE
 \setlist{nosep}
-\newglossarystyle{glossario-uece}{%
+\newglossarystyle{glossario-ifce}{%
 	%
 	\renewenvironment{theglossary}%
-	{\vspace{-0.3cm}\begin{description}[leftmargin=0cm]\itemsep -1pt}{\end{description}}%
-	%
-	\renewcommand*{\glossaryheader}{}%
+	{\vspace{-0.3cm}\begin{description}[leftmargin=.62cm]\itemsep 0pt}{\end{description}}%
 	
-	% indicate what to do at the start of each logical group
-	
-	\renewcommand*{\glsgroupheading}[1]{%
-		\vspace{0cm}\item[{\glsgetgrouptitle{##1}}] \vspace{\onelineskip}		
-	}
-	%
 	\renewcommand*{\glsgroupskip}{}%
 	% Depois da palavra, colocar o ":" e no fim o ponto final "."
 	\renewcommand*{\glossaryentryfield}[5]{%
-		\item[\glstarget{##1}{##2}:] ##3.%
+		\item[---\hspace{2mm}\glstarget{##1}{##2}:] ##3.%
 	}%
+	
 }
 
 \newcommand{\imprimirglossario}{ %
-	\glossarystyle{glossario-uece} %	
+	\glossarystyle{glossario-ifce} %	
 	\printglossary[title=\glossarioname,toctitle=\glossarioname] %
 	\addcontentsline{toc}{chapter}{\glossarioname}
 }
