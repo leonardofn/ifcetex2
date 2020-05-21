@@ -973,20 +973,11 @@
 } %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%             Dedicatoria             %%
+%%          Ficha Catalografica        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\imprimirdedicatoria}[1]{
-	\vspace*{\fill}
-	\vfill
-	%Retira o espaço do parágrafo
-	\hspace*{-1.25cm}
-	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{8cm}
-		\input{#1}
-	\end{minipage}
-	\pagebreak
+\newcommand{\imprimirfichacatalografica}[1]{%
+	\includepdf[pages=1]{#1} %
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1001,6 +992,23 @@
 			\end{SingleSpace}
 		\end{flushleft}
 	\end{errata}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%             Dedicatoria             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\imprimirdedicatoria}[1]{
+	\vspace*{\fill}
+	\vfill
+	%Retira o espaço do parágrafo
+	\hspace*{-1.25cm}
+	%Adiciona o espaço da margem
+	\hspace*{8cm}	
+	\begin{minipage}{8cm}
+		\input{#1}
+	\end{minipage}
+	\pagebreak
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1032,14 +1040,6 @@
 		\raggedleft{(\imprimirautordaepigrafe)\par}
 	\end{minipage}		
 	\pagebreak
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Ficha Catalografica        %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\imprimirfichacatalografica}[1]{%
-	\includepdf[pages=1]{#1} %
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
