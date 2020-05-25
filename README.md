@@ -6,7 +6,7 @@ A classe [**ABNTeX2**](https://github.com/abntex/abntex2) é uma classe derivada
 
 # O que é o IFCETeX2?
 
-O **IFCETeX2** é um projeto ramificado do [**UECETeX2**](https://github.com/thiagodnf/uecetex2), repositório mantido por [**Thiago Nascimento**](https://github.com/thiagodnf) e destinado a UECE (Universidade Estadual do Ceará). Ambos os projetos são baseados no ABNTeX2. O IFCETeX2 foi desenvolvido para auxiliar os discentes do Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) em seus trabalhos de monografias de graduação, dissertações de mestrado e teses de doutorado. Entretanto, o IFCETeX2 é suficientemente configurável e facilmente adaptável para ser utilizada em praticamente todos os campi do Instituto Federal no Brasil. Espera-se que o projeto seja um modelo de trabalho acadêmico que implemente todas as exigências das normas da ABNT sem a necessidade de se preocupar com o estilo ou formatação do documento.
+O **IFCETeX2** é um projeto ramificado do [**UECETeX2**](https://github.com/thiagodnf/uecetex2), repositório mantido por [**Thiago Nascimento**](https://github.com/thiagodnf) e destinado a UECE (Universidade Estadual do Ceará). Ambos os projetos são baseados no ABNTeX2. O IFCETeX2 foi desenvolvido para auxiliar os discentes do Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) em seus trabalhos de monografias de graduação, dissertações de mestrado e teses de doutorado. Entretanto, o IFCETeX2 é suficientemente configurável e facilmente adaptável para ser utilizada em praticamente todos os *campi* do Instituto Federal no Brasil. Espera-se que o projeto seja um modelo de trabalho acadêmico que implemente todas as exigências das normas da ABNT sem a necessidade de se preocupar com o estilo ou formatação do documento.
 
 ### Modelos disponíveis
 
@@ -21,9 +21,9 @@ O **IFCETeX2** é um projeto ramificado do [**UECETeX2**](https://github.com/thi
 
 Para utilizar o IFCETeX2 você precisa seguir os seguintes passos:
 
-1. Clique [aqui](https://github.com/leonardofn/ifcetex2/archive/master.zip) para baixar o projeto;
+1. Clique [aqui](https://github.com/leonardofn/ifcetex2/archive/ifcetex2.zip) para baixar o projeto;
 2. Descompacte o arquivo no diretório onde você deseja guardar os arquivos do seu trabalho;
-3. Crie o seu texto a partir do arquivo *documento.tex* distribuído no arquivo baixado. O arquivo contém diversos comentários relativos aos diversos comandos e pacotes utilizados, que devem facilitar o uso e entendimento.
+3. Crie o seu texto a partir do arquivo *documento.tex* presente no arquivo baixado. O arquivo contém diversos comentários relativos aos diversos comandos e pacotes utilizados, que devem facilitar o uso e entendimento.
 
 > Você é iniciante em LaTeX ou em abnTeX2? Clique [aqui](https://github.com/abntex/abntex2/wiki/PorOndeComecar) para acessar a página do repositório do projeto mantido equipe do abnTeX2. Nesta página é possível acessar diversos links sobre o LaTeX e sobre o abnTeX2 como, por exemplo, a história do LaTeX e alguns minicursos desenvolvidos em outras universidades, modelos prontos de trabalhos acadêmicos, elaboração de referências, etc.
 
@@ -44,7 +44,7 @@ Uma vez que todas as informações foram colocadas no documento, você precisar�
  
   - O modelo permite a participação de somente um coorientador;
   - A folha de aprovação da Dissertação e Tese suporta no máximo 6 pessoas (Orientador, Coorientador e 4 membros externos);
-  - A inserção dos elementos quadro e algoritmo não encontram-se implementados.
+  - A inserção de ambientes prontos do tipo quadro e algoritmo não encontram-se implementados.
   
 # Dicas
 
@@ -106,14 +106,14 @@ Veja a seguir como inserir alguns elementos no seu texto.
 \end{alineas}
 ```
 
-### Como criar Capítulos
+### Como criar capítulos
 
 ```tex
 \chapter{Fundamentação Teórica}
 \label{cap:fundamentacao-teorica}
 ```
 
-### Como criar Seções
+### Como criar seções
 
 ```tex
 % Seções Secundárias
@@ -132,7 +132,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 \subsubsubsection{Objetivo Geral 5}
 \label{sec:objetivo-geral-5}
 ```
-# Supporte ao Inglês
+# Supporte ao inglês
 
 Se o seu trabalho será escrito em inglês, adicione o seguinte comando depois do \begin{document}
 
@@ -142,4 +142,4 @@ Se o seu trabalho será escrito em inglês, adicione o seguinte comando depois d
 
 # Atenção
 
-O IFCETeX2 é fornecido gratuitamente e sem garantias e pode ser redistribuído livremente para fins acadêmicos. O IFCETeX2 é um produto extraoficial e não está oficialmente vinculada ao Instituto Federal do Ceará (IFCE).
+O IFCETeX2 é fornecido gratuitamente e sem garantias e pode ser redistribuído livremente para fins acadêmicos. O IFCETeX2 é um produto extraoficial e não está oficialmente vinculada ao Instituto Federal do Ceará.
