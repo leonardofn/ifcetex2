@@ -296,7 +296,8 @@
 \renewcommand{\IBGEtabfontsize}{\normalfont}
 
 % Numeração da tabela começa em 1
-\setcounter{table}{-1}
+% Descomente a linha seguinte, caso não seja utilizado glossário
+%\setcounter{table}{0}
 
 % Equações são númeradas de forma contínua
 \counterwithout{equation}{chapter}
@@ -1051,33 +1052,11 @@
 
 \newcommand{\imprimirlistadesimbolos}[1]{
 	\input{#1}
+	% Por algum motivo, ao utilizar o comando \setcounter{table}{0} fora desse ambiente faz
+	% com que a Lista de Tabelas seja numerada incorretamente.
+	% Caso o glossário não seja utilizado, comente o comando seguinte.
+	\setcounter{table}{0}
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              Glossário              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Glossario desenvolvido para o IFCE
-\setlist{nosep}
-\newglossarystyle{glossario-ifce}{%
-	%
-	\renewenvironment{theglossary}%
-	{\vspace{-0.3cm}\begin{description}[leftmargin=.62cm]\itemsep 0pt}{\end{description}}%
-	
-	\renewcommand*{\glsgroupskip}{}%
-	% Depois da palavra, colocar o ":" e no fim o ponto final "."
-	\renewcommand*{\glossaryentryfield}[5]{%
-		\item[---\hspace{2mm}\glstarget{##1}{##2}:] ##3.%
-	}%
-	
-}
-
-\newcommand{\imprimirglossario}{ %
-	\glossarystyle{glossario-ifce} %	
-	\printglossary[title=\glossarioname,toctitle=\glossarioname] %
-	\addcontentsline{toc}{chapter}{\glossarioname}
-}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%               Referências           %%
@@ -1088,6 +1067,31 @@
 	% TODO Por algum motivo, colocar esse comando antes da bibliografia faz com que o 
 	% ultimo capitulo dos elem fique sem o numero da pagina. 
 	\postextual %
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%              Glossário              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Glossario desenvolvido para o IFCE
+\setlist{nosep}
+\newglossarystyle{glossario-ifce}{%
+
+	\renewenvironment{theglossary}{
+		\vspace{-0.3cm}\begin{description}[leftmargin=6.2mm]\itemsep 0pt}{\end{description}%
+	}%
+	\renewcommand*{\glossaryheader}{}%
+	%\renewcommand*{\glsgroupskip}{}%
+	% Depois da palavra, colocar o ":" e no fim o ponto final "."
+	\renewcommand*{\glossaryentryfield}[5]{%
+		\item[---\hspace{2mm}\glstarget{##1}{##2}:] ##3.%
+	}%
+}
+
+\newcommand{\imprimirglossario}{ %
+	\glossarystyle{glossario-ifce} %	
+	\printglossary[title=\glossarioname,toctitle=\glossarioname] %
+	\addcontentsline{toc}{chapter}{\glossarioname}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1143,28 +1147,6 @@
 		~\textemdash~%
 	}{} % else
 }
-
-% Remove uppercase do apendice e anexos
-\makeatletter
-\ifthenelse{\boolean{ABNTEXsumario-abnt-6027-2012}}{
-	\settocpreprocessor{chapter}{%
-		\ifthenelse{\boolean{abntex@apendiceousecao}}{%
-			\let\tempf@rtoc\f@rtoc%
-			\def\f@rtoc{%
-				\texorpdfstring{\tempf@rtoc}{\tempf@rtoc}}%
-		}{
-			\let\tempf@rtoc\f@rtoc%
-			\def\f@rtoc{%
-				\texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
-		}
-	}
-	\settocpreprocessor{part}{%
-		\let\tempf@rtoc\f@rtoc%
-		\def\f@rtoc{%
-			\texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
-	}
-}{}
-\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%           Número das Páginas        %%
@@ -1241,23 +1223,7 @@
 % Altera a fonte da seção quinária
 \renewcommand\cftparagraphpagefont{\normalfont}
 
-% Secao Secundaria (Section): Caixa alta, Não Negrito, tamanho 12
-\makeatletter
-\let\oldcontentsline\contentsline
-\def\contentsline#1#2{%
-	\expandafter\ifx\csname l@#1\endcsname\l@section %
-	\expandafter\@firstoftwo %
-	\else %
-	\expandafter\@secondoftwo %
-	\fi %
-	{%
-		\oldcontentsline{#1}{\MakeTextUppercase{#2}}%
-	}{%
-	\oldcontentsline{#1}{#2}%
-}%
-}
-\makeatother
-
+% Troca 'Fonte - ' por 'Fonte: '
 \makeatletter
 \renewcommand{\fonte}[2][\fontename]{%
 	\M@gettitle{#2}%
